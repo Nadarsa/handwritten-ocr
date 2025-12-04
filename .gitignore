@@ -1,0 +1,149 @@
+# .gitignore для проекта распознавания рукописного текста
+# Исключаем большие файлы, кэши, датасеты
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# IDEs
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Исходный датасет - СЛИШКОМ БОЛЬШОЙ для GitHub
+data/raw/*
+data/raw/**/*
+
+# Обработанные данные
+data/processed/*
+data/processed/**/*
+
+# Исключение: сохраняем .gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/**/README.md
+
+# Метаданные датасета можно оставить
+!data/processed/dataset_splits.json
+
+# Веса моделей - СЛИШКОМ БОЛЬШИЕ
+*.pth
+*.pt
+*.h5
+*.pkl
+*.ckpt
+*.pb
+*.onnx
+models/weights/
+models/checkpoints/
+
+# Логи
+*.log
+logs/
+*.out
+
+# Временные файлы
+tmp/
+temp/
+.cache/
+
+# OS Files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# Google Colab
+.config/
+google_auth_oauthlib/
+
+# Credentials & Secrets
+*.json
+!dataset_splits.json
+!model_benchmarks.json
+!package.json
+credentials.txt
+.env
+.env.local
+secrets.yaml
+config.ini
+
+# API keys
+api_keys.txt
+*.key
+
+# Бэкапы
+*.bak
+*.backup
+*.old
+
+# Архивы
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Большие медиа-файлы
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Тестовые файлы
+test_*.py
+*_test.py
+.pytest_cache/
+.coverage
+htmlcov/
