@@ -57,7 +57,8 @@
 handwritten-ocr/
 ├── data/
 │   ├── raw/              # Исходный датасет (на Google Drive)
-│   └── processed/        # Обработанные данные (train/val/test)
+│   ├── processed/        # Обработанные данные (train/val/test)
+│   └── mini-test/        # Небольшой мини-набор страниц для быстрого теста моделей
 ├── notebooks/
 │   ├── 00_model_research.ipynb
 │   ├── 01_data_loading_augmentation.ipynb
@@ -81,6 +82,32 @@ handwritten-ocr/
 ├── requirements.txt
 └── README.md
 ```
+
+## Быстрый мини-тест моделей
+
+Для быстрой проверки, что окружение и модели работают, в `data/mini-test` лежит небольшой набор страниц HWR200
+с эталонными расшифровками (`*.JPG` + соответствующие `.txt`).
+
+Пример запуска из корня репозитория `handwritten-ocr`:
+
+```bash
+# Минимальное окружение только для инференса:
+pip install -r requirements.inference.txt
+
+# Добавляем src в PYTHONPATH (одна сессия/терминал)
+export PYTHONPATH=src
+
+# Инференс по одной странице
+python src/infer_page.py trocr_kazars data/mini-test/hwr200_40_59_50_7.JPG
+
+# Оценка качества (CER/WER) по мини-набору
+python src/eval_folder.py trocr_kazars data/mini-test
+
+# Полное окружение для аугментаций и ноутбуков:
+# pip install -r requirements.txt
+```
+
+Доступные имена моделей для этих скриптов см. в `src/models/inference.py` (список `AVAILABLE_OCR_MODELS`).
 
 ## Технологический стек
 
@@ -118,7 +145,7 @@ handwritten-ocr/
 
 - [Работа с Google Drive]()
 - [Описание датасета]()
-- [Сравнение моделей]()
+- [Сравнение моделей](models.md)
 - [Результаты экспериментов]()
 - [Чек-лист воспроизводимости]()
 
