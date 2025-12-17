@@ -332,7 +332,7 @@ handwritten-ocr/
 - [Работа с Google Drive](https://github.com/Nadarsa/handwritten-ocr/blob/main/docs/cloud_instructions.md)
 - [Описание датасета](https://github.com/Nadarsa/handwritten-ocr/blob/main/data/description_of_the_dataset.md)
 - [Сравнение моделей](https://github.com/Nadarsa/handwritten-ocr/blob/main/models.md)
-- [Результаты экспериментов]()
+- [Результаты экспериментов](https://github.com/Nadarsa/handwritten-ocr/blob/main/results/experiment_logs.xlsx)
 - [Чек-лист воспроизводимости](https://github.com/Nadarsa/handwritten-ocr/blob/main/docs/reproducibility_checklist.md)
 
 ## Лицензия
