@@ -317,7 +317,7 @@ print(text)
 handwritten-ocr/
 ├── data/
 │   ├── raw/                      # Исходные датасеты (на Google Drive)
-│   │   ├── hwr200/              # 117 оригинальных + аугментации
+│   │   ├── hwr200/               # 117 оригинальных + аугментации
 │   │   └── school_notebooks_ru/  # 300 оригинальных + аугментации
 │   └── processed/                # Обработанные данные
 ├── notebooks/
