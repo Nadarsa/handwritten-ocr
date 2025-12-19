@@ -326,6 +326,7 @@ handwritten-ocr/
 │   ├── 03_augmentation.ipynb
 │   ├── 04_demo.ipynb            # Финальная демонстрация
 │   ├── TestOcrMetrics.ipynb     # Вычисление метрик качества
+│   ├── TestProcessing.ipynb     # Эксперименты и вычисление метрик качества
 │   └── templates/               # Шаблоны для экспериментов
 ├── src/
 │   ├── metrics.py               # Метрики (CER, WER)
