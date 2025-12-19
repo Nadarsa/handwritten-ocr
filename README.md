@@ -137,7 +137,9 @@ os.chdir('/content/drive/MyDrive/handwritten-ocr-main')
 ## Ключевые результаты
 
 ### Подготовка данных
-- **Источники:** 2 датасета (HWR200 + school_notebooks_ru)
+- **Источники:** 2 датасета:
+  1. HWR200 (https://huggingface.co/datasets/AntiplagiatCompany/HWR200)  
+  2. school_notebooks_ru (https://huggingface.co/datasets/ai-forever/school_notebooks_RU)
 - **Оригинальных изображений:** 417 (117 HWR200 + 300 school_notebooks_ru)
 - **Аугментированных изображений:** 1185
 - **Итоговый объем:** 1602 изображения
